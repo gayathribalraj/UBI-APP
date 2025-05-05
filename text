@@ -1,0 +1,52 @@
+//text alignment 
+crossAxisAlignment: CrossAxisAlignment.start,
+
+//change seconds 
+ void initState(){
+       super.initState();
+       Future.delayed(Duration(seconds: 5), () {
+      
+        // Navigate to new Screen
+        // Navigator.push(context,
+        // MaterialPageRoute(builder: (context) => LoginScreen())
+        // );
+
+
+        // Replace current Screen to new Screen
+        Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (context) => LoginScreen())
+        );
+
+       }
+
+       );
+  },
+
+  // responsive ;
+
+  width: MediaQuery.of(context).size.width,
+  height: MediaQuery.of(context).size.height,
+
+//container width height;
+
+  height: double.infinity,
+  width: double.infinity,
+
+  //email validation 
+    //form difined 
+  final TextEditingController userNameValidation = TextEditingController();
+  final TextEditingController passValidation = TextEditingController();
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+
+
+ // form assign
+                    TextFormField(
+                            controller: userNameValidation,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a username';
+                              }
+                              return null;
+                            },)
