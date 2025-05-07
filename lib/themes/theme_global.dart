@@ -11,7 +11,7 @@ class ThemesColor {
 
 final ThemeData apptheme = ThemeData(
   primaryColor: ThemesColor.primaryBlue,
-  scaffoldBackgroundColor: ThemesColor.white,
+  scaffoldBackgroundColor: const Color.fromRGBO(243, 246, 248, 1),
   fontFamily: 'Roboto',
   textTheme: TextTheme(bodyLarge: TextStyle(color: ThemesColor.textDarkBlue)),
 );

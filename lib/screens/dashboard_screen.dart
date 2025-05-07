@@ -13,17 +13,25 @@ class DashboardScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ThemesColor.deepSkyBlue,
         title: Text('Dashboard'),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+        ],
       ),
+
       drawer: Drawer(
         child: ListView(
-          padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(209, 14, 111, 190),
+              ),
               child: Text(
                 "Menu",
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 20, 1, 1),
+                  color: ThemesColor.white,
                   fontSize: 24,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

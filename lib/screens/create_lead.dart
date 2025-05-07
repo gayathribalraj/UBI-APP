@@ -21,7 +21,7 @@ class CreateLead extends StatelessWidget {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: const Color.fromARGB(239, 3, 47, 83),
+                color: const Color.fromARGB(168, 8, 84, 145),
               ),
               child: Text(
                 'Menu',
@@ -50,6 +50,35 @@ class CreateLead extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                'WELCOME TO CREATE LEAD PAGE',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DashboardScreen()),
+          );
+        },
+        child: Icon(Icons.add),
+        elevation: 20,
+        hoverColor: Colors.indigoAccent,
+
+        // clipBehavior: Clip.hardEdge,
       ),
     );
   }

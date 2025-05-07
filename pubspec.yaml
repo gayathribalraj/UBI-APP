@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   loading_animation_widget: ^1.2.0   # ✅ Moved outside of flutter block
+  reactive_forms: ^18.0.0
 
 dev_dependencies:
   flutter_test:
